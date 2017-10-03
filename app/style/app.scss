@@ -1,0 +1,10 @@
+.height-minus-tabs {
+  height: calc(100vh - 100px);
+  height: -webkit-calc(100vh - 100px);
+  overflow-y: scroll;
+}
+
+div[ui-ace] {
+  min-height: 100px;
+  font-size: 15px;
+}

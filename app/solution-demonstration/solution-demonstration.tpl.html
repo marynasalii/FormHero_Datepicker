@@ -1,0 +1,148 @@
+<span ng-controller="DemonstrationViewController as demoCtrl">
+    <div flex layout="column" layout-align="start start">
+    <h1 class="md-display-2">Your Solution Demonstration</h1>
+    <p>Please ensure your directive is working for each of the uses listed below:</p>
+    <table class="demonstration-table">
+        <tr>
+            <td width="50%">
+                <h4 class="use-case">Use Case 1:</h4>
+                <h4 class="use-case-title">Pre-population with a Date Object</h4>
+                <p>Your solution should allow the ng-model value to be pre-set using a date object.</p>
+                <label>Sample Usage:</label>
+                <div class="use-case-1" ui-ace="{ mode : 'html', useWrapMode : true,  theme:'chrome', onLoad: demoCtrl.aceLoaded, showGutter: false }" ng-model="demoCtrl.useCase1">
+
+                </div>
+            <td>
+            <td><input type="date" fh-date-input ng-model="demoCtrl.prepopulatedFromDateObject"><br><br>
+                <span>Choosen date is: {{ demoCtrl.prepopulatedFromDateObject }}</span>
+            </td>
+            
+</tr>
+
+<tr>
+    <td width="50%">
+        <h4 class="use-case">Use Case 2:</h4>
+        <h4 class="use-case-title">Pre-population with a Date String</h4>
+        <p>Your solution should allow the ng-model value to be pre-set using a date string (as long as the string uses the new
+            Date().toJSON() format.</p>
+        <label>Sample Usage:</label>
+        <div class="use-case-2" ui-ace="{ mode : 'html', useWrapMode : true,  theme:'chrome', onLoad: demoCtrl.aceLoaded, showGutter: false }"
+            ng-model="demoCtrl.useCase2">
+
+        </div>
+    </td>
+    <td>
+        <input type="date" fh-date-input ng-model="demoCtrl.prepopulatedFromDateString"><br><br>
+        <span>Choosen date is: {{ demoCtrl.prepopulatedFromDateString }}</span>
+    </td>
+</tr>
+<tr>
+    <td width="50%">
+        <h4 class="use-case">Use Case 3:</h4>
+        <h4 class="use-case-title">Ng-Model updated from outside of the directive/component</h4>
+        <p>Your solution should handle the case where the value of ng-model is updated from outside of your component and should
+            reflect the new value. This example, which is using demoCtrl.changingDate for the model, should be changing by
+            10 days every 5 seconds.</p>
+        <label>Sample Usage:</label>
+        <div class="use-case-3" ui-ace="{ mode : 'html', useWrapMode : true,  theme:'chrome', onLoad: demoCtrl.aceLoaded, showGutter: false }"
+            ng-model="demoCtrl.useCase3">
+
+        </div>
+    </td>
+    <td>
+        <input type="date" fh-date-input ng-model="demoCtrl.changingDate"><br><br>
+        <span>Choosen date is: {{ demoCtrl.changingDate }}</span>
+    </td>
+</tr>
+<tr>
+    <td>
+        <h4 class="use-case">Use Case 4:</h4>
+        <h4 class="use-case-title">Supports a configurable maximum date</h4>
+        <p>Your solution should handle the case where the user sets a maximum date through the attribute fh-max-date. The user
+            interface should grey-out and prevent selection of any dates exceeding the maximum.</p>
+        <label>Sample Usage:</label>
+        <div class="use-case-4" ui-ace="{ mode : 'html', useWrapMode : true,  theme:'chrome', onLoad: demoCtrl.aceLoaded, showGutter: false }"
+            ng-model="demoCtrl.useCase4">
+
+        </div>
+    </td>
+    <td>
+        <input type="date" fh-date-input ng-model="demoCtrl.useCase4SelectedDate" fh-max-date="demoCtrl.exampleMaximumDate"><br><br>
+        <span>Choosen date is: {{ demoCtrl.useCase4SelectedDate }} </span>
+    </td>
+</tr>
+<tr>
+    <td>
+        <h4 class="use-case">Use Case 5:</h4>
+        <h4 class="use-case-title">Supports a configurable minimum date</h4>
+        <p>Your solution should handle the case where the user sets a maximum date through the attribute fh-max-date. The user
+            interface should grey-out and prevent selection of any dates exceeding the maximum.</p>
+        <label>Sample Usage:</label>
+        <div class="use-case-5" ui-ace="{ mode : 'html', useWrapMode : true,  theme:'chrome', onLoad: demoCtrl.aceLoaded, showGutter: false }"
+            ng-model="demoCtrl.useCase5">
+
+        </div>
+    </td>
+    <td>
+        <input type="date" fh-date-input ng-model="demoCtrl.useCase4SelectedDate" fh-min-date="demoCtrl.exampleMinimumDate"><br><br>
+        <span>Choosen date is: {{ demoCtrl.useCase4SelectedDate }} </span>
+    </td>
+</tr>
+<tr>
+    <td>
+        <h4 class="use-case">Use Case 6:</h4>
+        <h4 class="use-case-title">Supports a required attribute</h4>
+        <p>If fh-required=true, the ng-model should be invalid, and the model should have the error 'required'. You may want
+            to modify the same code in the right of this column to have an ng-form and ng-messages to show errors on the
+            field.
+        </p>
+        <label>Sample Usage:</label>
+        <div class="use-case-6" ui-ace="{ mode : 'html', useWrapMode : true,  theme:'chrome', onLoad: demoCtrl.aceLoaded, showGutter: false }"
+            ng-model="demoCtrl.useCase6">
+
+        </div>
+        <td>
+            <td>
+                <div fh-date-input fh-required="true"></div>
+            </td>
+</tr>
+<tr>
+    <td>
+        <h4 class="use-case">Use Case 7:</h4>
+        <h4 class="use-case-title">If fh-precision is set to 'month', only prompt for year and month.</h4>
+        <p>The user of the directive should be able to set the date precision to 'year', 'month' or 'day'. If the precision
+            is set to month, the user should be prompted only to pick month and year and only month and year should be displayed.</p>
+        <label>Sample Usage:</label>
+        <div class="use-case-7" ui-ace="{ mode : 'html', useWrapMode : true,  theme:'chrome', onLoad: demoCtrl.aceLoaded, showGutter: false }"
+            ng-model="demoCtrl.useCase7">
+
+        </div>
+    </td>
+    <td>
+        <div fh-date-input fh-precision="month"></div>
+    </td>
+</tr>
+<tr>
+    <td>
+        <h4 class="use-case">Use Case 8:</h4>
+        <h4 class="use-case-title">If fh-precision is set to 'year', only prompt for the year.</h4>
+        <p>If the precision is set to year, the user should only be prompted for the year and only year should be displayed.</p>
+        <label>Sample Usage:</label>
+        <div class="use-case-8" ui-ace="{ mode : 'html', useWrapMode : true,  theme:'chrome', onLoad: demoCtrl.aceLoaded, showGutter: false }"
+            ng-model="demoCtrl.useCase8">
+
+        </div>
+    </td>
+    <td>
+        <div fh-date-input fh-precision="year"></div>
+    </td>
+</tr>
+</table>
+</div>
+<div flex="none" layout="column" layout-align="start start" class="debug-zone">
+    <h4>DEBUG ZONE</h4>
+    <p>Just to be a little helpful, we've dumped the values stored on the demoCtrl controller here for reference</p>
+    <pre>{{ demoCtrl | json }}</pre>
+</div>
+
+</span>

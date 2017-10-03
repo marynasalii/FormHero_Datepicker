@@ -1,0 +1,47 @@
+<h1 class="md-display-2">Instructions</h1>
+
+<p>To demonstrate your knowledge of JavaScript and AngularJS (or your ability to quickly learn how to write AngularJS Directives / Components) we have put together this mini application.</p>
+<p>We would like you to create a directive/component that is a custom Date Input.</p>
+<p>This directive/component should be called <b>fh-date-input</b>, should allow <b>fh-data-input</b> to be used as an attribute to instantiate the directive and should meet the following requirements:</p>
+<ul>
+    <li>It should consist of at least three files: fh-date-input.js, fh-date-input.scss and fh-date-input.tpl.html</li>
+    <li>It should require ng-model to connect the directive to a value</li>
+    <li>The value passed to ng-model must be able to be null, undefined, a String (in the format produced by Date.toJSON()) or a Date object</li>
+    <li>You should be able to configure a maximum date by adding an fh-max-date attribute</li>
+    <li>You should be able to configure a minimum date by adding an fh-min-date attribute</li>
+    <li>It should be properly two-way bound. That is, if the value passed to ng-model changes, your date input widget should update with the new value.</li>
+    <li>It should support being 'required'. That is, if fh-required="true" is an attribute on the element, the widget should behave like a proper form input, and set the correct error state on ng-model</li>
+    <li>It should support updating the ng-model to reflect $dirty, $pristine, $valid, etc, states.</li>
+    <li>You should be able to use any of the above options in combination (ie. set both a min and a max date)</li>
+    <li>You should be able to configure the 'precision' of the date picker through an 'fh-precision' attribute. By default, this will be 'day' and the user will be prompted to pick month, day and year. But if it is set to 'month' they should only be prompted for month and year, and if set to 'year', they should only be prompted for the year.</li>
+</ul>
+<p>The next tab, "Your Solution", is already set up to use the new directive, and contains a variety of uses of the directive that should demonstrate it's functionality.</p>
+<p>To give you some additional guidance on what the user interface should look like, we are including the following images that visually describe what we expect the widget to look like in various states:</p>
+<table class="instructions-table">
+    <tr>
+        <td>1.</td>
+        <td><img src="./images/initial.png"></td>
+        <td><p>When the input is first loaded, and there is no value set for it.</p></td>
+    </tr>
+    <tr>
+        <td>2.</td>
+        <td><img src="./images/month.png"></td>
+        <td><p>When the user first click into the month field, a popup/modal should appear, allowing the selection of the month.</p></td>
+    </tr>
+    <tr>
+        <td>3.</td>
+        <td><img src="./images/day.png"></td>
+        <td>
+            <p>When the month is selected, the view in the modal/popup should automatically switch to allow the selection of the day</p>
+            <p>The back-arrow should return the user to the selection for the month.</p>
+        </td>
+    </tr>
+    <tr>
+        <td>4.</td>
+        <td><img src="./images/year.png"></td>
+        <td>
+            <p>Once the day is selected, the view should change to allow the user to pick the year. It should allow navigation between decades above the list of years.</p>
+            <p>The back-arrow should return the user to the selection for the day.</p>
+        </td>
+    </tr>
+</table>

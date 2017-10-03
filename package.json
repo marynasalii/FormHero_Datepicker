@@ -1,0 +1,45 @@
+{
+  "name": "skills-front-end-developer",
+  "version": "1.0.0",
+  "description": "This package contains the description of a technical problem, and the start of work on that problem. Your task is to produce a working solution.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/formhero/skills-front-end-developer.git"
+  },
+  "author": "FormHero Inc.",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/formhero/skills-front-end-developer/issues"
+  },
+  "homepage": "https://github.com/formhero/skills-front-end-developer#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "express": "^4.15.4",
+    "glob": "^7.1.2",
+    "gulp": "^3.9.1",
+    "gulp-angular-protractor": "^1.1.1",
+    "gulp-angular-templatecache": "^2.0.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-cleancss": "^0.2.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-insert": "^0.5.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-rimraf": "^0.2.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-size": "^2.1.0",
+    "gulp-streamify": "^1.0.2",
+    "gulp-using": "^0.1.1",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^4.3.11",
+    "path": "^0.12.7",
+    "protractor": "^5.1.2",
+    "run-sequence": "^2.1.0",
+    "webdriver-manager": "^12.0.6"
+  }
+}
